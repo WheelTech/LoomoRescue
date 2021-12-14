@@ -21,6 +21,13 @@ android {
         }
     }
 
+    // MQTT use features of java8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
 }
 
 dependencies {
@@ -33,8 +40,18 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //Loomo SDK Dependencies
+    implementation 'com.segway.robot:visionsdk:0.6.547'
     implementation 'com.segway.robot:speech-sdk:0.5.327'
-    implementation 'com.segway.robot:basesdk:0.6.746'
     implementation 'com.segway.robot:headsdk:0.6.746'
+    implementation 'com.segway.robot:basesdk:0.6.746'
     implementation 'com.segway.robot:sensorsdk:0.6.746'
+    implementation 'com.segway.robot:robot-connectivity-sdk:0.5.104'
+    implementation 'com.segway.robot:mobile-connectivity-sdk:0.5.104'
+    implementation 'com.segway.robot:emoji:0.1.28'
+    implementation 'com.segway.robot:support-lib:1.1.2'
+
+    // MQTT Service
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.1'
+
 }
